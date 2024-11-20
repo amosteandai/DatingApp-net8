@@ -4,13 +4,14 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace API.Entities
+namespace API.DTOs
 {
-    public class AppUser
+    public class RegisterDTO
     {
-        public int Id { get; set; }
+        [Required]
         public required string UserName { get; set; }
-        public required byte[] PasswordHash { get; set; }
-        public required byte[] PasswordSalt { get; set; }
+
+        [Required]
+        public required string Password { get; set; }
     }
 }
