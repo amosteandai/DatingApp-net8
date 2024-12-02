@@ -65,6 +65,5 @@ namespace API.Controllers
         {
             return await context.Users.AnyAsync(x => x.UserName.ToLower() == username.ToLower());
         }
-        
     }
 }
