@@ -32,6 +32,7 @@ export class ListsComponent implements OnInit, OnDestroy{
   loadLikes(){
     this.likesService.getLikes(this.predicate,this.pageNumber,this.pageSize)
   }
+
   pageChanged(event: any){
     if(this.pageNumber !== event.page){
       this.pageNumber = event.page;
@@ -39,6 +40,8 @@ export class ListsComponent implements OnInit, OnDestroy{
     }
   }
 
+
+  
   getTitle(){
     switch(this.predicate){
       case 'liked': return 'Members you like';
